@@ -1,3 +1,4 @@
+import 'package:casino_304/pages/leaderBoardPage.dart';
 import 'package:casino_304/pages/newGamePage.dart';
 import 'package:casino_304/pages/playerEarningsPage.dart';
 import 'package:casino_304/pages/searchGamesPage.dart';
@@ -85,6 +86,12 @@ class HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StartNewGamePage()),
+                );
+              }),
+          DashBoardItem(title: "Leaderboard", icon: Icons.star, onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LeaderBoardPage()),
                 );
               }),
           DashBoardItem(title: "End Game", icon: Icons.edit),
