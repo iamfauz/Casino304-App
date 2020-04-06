@@ -1,5 +1,4 @@
 
-
 class Game {
   int id;
   String gameDate;

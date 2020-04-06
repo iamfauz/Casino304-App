@@ -1,3 +1,4 @@
+import 'package:casino_304/pages/playerEarningsPage.dart';
 import 'package:casino_304/pages/searchGamesPage.dart';
 import 'package:flutter/material.dart';
 
@@ -42,12 +43,22 @@ class HomePageState extends State<HomePage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  DateEntryFormPage()),
+                    MaterialPageRoute(
+                        builder: (context) => DateEntryFormPage()),
                   );
                 },
               ),
               DashBoardItem(title: "Statistics", icon: Icons.equalizer),
-              DashBoardItem(title: "Player Earnings", icon: Icons.attach_money),
+              DashBoardItem(
+                  title: "Player Earnings",
+                  icon: Icons.attach_money,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => PlayerIdFormPage()),
+                    );
+                  }),
               DashBoardItem(title: "Start New Game", icon: Icons.add),
               DashBoardItem(title: "Edit Game", icon: Icons.edit),
               DashBoardItem(title: "Delete", icon: Icons.delete_outline)
