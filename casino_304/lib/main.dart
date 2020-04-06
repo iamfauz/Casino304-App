@@ -1,3 +1,4 @@
+import 'package:casino_304/pages/endGamePage.dart';
 import 'package:casino_304/pages/leaderBoardPage.dart';
 import 'package:casino_304/pages/newGamePage.dart';
 import 'package:casino_304/pages/playerEarningsPage.dart';
@@ -88,13 +89,24 @@ class HomePageState extends State<HomePage> {
                   MaterialPageRoute(builder: (context) => StartNewGamePage()),
                 );
               }),
-          DashBoardItem(title: "Leaderboard", icon: Icons.star, onPressed: () {
+          DashBoardItem(
+              title: "Leaderboard",
+              icon: Icons.star,
+              onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LeaderBoardPage()),
                 );
               }),
-          DashBoardItem(title: "End Game", icon: Icons.edit),
+          DashBoardItem(
+              title: "End Game",
+              icon: Icons.edit,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => EndNewGamePage()),
+                );
+              }),
           DashBoardItem(title: "Delete", icon: Icons.delete_outline)
         ]),
       ),
