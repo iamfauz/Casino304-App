@@ -192,7 +192,7 @@ class GamesRow extends StatelessWidget {
                         fontSize: 16,
                         color: Colors.black,
                         fontWeight: FontWeight.w600)),
-                Text(game.endtime,
+                Text(game?.endtime ?? "-",
                     style: TextStyle(fontSize: 16, color: Colors.black87))
               ]),
               

@@ -1,5 +1,7 @@
+import 'package:casino_304/pages/newGamePage.dart';
 import 'package:casino_304/pages/playerEarningsPage.dart';
 import 'package:casino_304/pages/searchGamesPage.dart';
+import 'package:casino_304/pages/statisticsPage.dart';
 import 'package:casino_304/pages/totalRakePage.dart';
 import 'package:flutter/material.dart';
 
@@ -34,47 +36,60 @@ class HomePageState extends State<HomePage> {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 2.0),
-        child: GridView.count(
-            crossAxisCount: 2,
-            padding: EdgeInsets.all(3.0),
-            children: <Widget>[
-              DashBoardItem(
-                title: "Search Games",
-                icon: Icons.search,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DateEntryFormPage()),
-                  );
-                },
-              ),
-              DashBoardItem(title: "Statistics", icon: Icons.equalizer),
-              DashBoardItem(
-                  title: "Player Earnings",
-                  icon: Icons.attach_money,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PlayerIdFormPage()),
-                    );
-                  }),
-              DashBoardItem(
-                title: "Rake Earned",
-                icon: Icons.call_made,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => TotalRakeListPage()),
-                  );
-                },
-              ),
-              DashBoardItem(title: "Start New Game", icon: Icons.add),
-              DashBoardItem(title: "Edit Game", icon: Icons.edit),
-              DashBoardItem(title: "Delete", icon: Icons.delete_outline)
-            ]),
+        child: GridView
+            .count(crossAxisCount: 2, padding: EdgeInsets.all(3.0), children: <
+                Widget>[
+          DashBoardItem(
+            title: "Search Games",
+            icon: Icons.search,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DateEntryFormPage()),
+              );
+            },
+          ),
+          DashBoardItem(
+            title: "Statistics",
+            icon: Icons.equalizer,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PlayerFormPage()),
+              );
+            },
+          ),
+          DashBoardItem(
+              title: "Player Earnings",
+              icon: Icons.attach_money,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PlayerIdFormPage()),
+                );
+              }),
+          DashBoardItem(
+            title: "Rake Earned",
+            icon: Icons.call_made,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TotalRakeListPage()),
+              );
+            },
+          ),
+          DashBoardItem(
+              title: "Start New Game",
+              icon: Icons.add,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StartNewGamePage()),
+                );
+              }),
+          DashBoardItem(title: "End Game", icon: Icons.edit),
+          DashBoardItem(title: "Delete", icon: Icons.delete_outline)
+        ]),
       ),
     );
   }
