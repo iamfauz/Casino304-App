@@ -1,5 +1,6 @@
 import 'package:casino_304/pages/playerEarningsPage.dart';
 import 'package:casino_304/pages/searchGamesPage.dart';
+import 'package:casino_304/pages/totalRakePage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -59,6 +60,17 @@ class HomePageState extends State<HomePage> {
                           builder: (context) => PlayerIdFormPage()),
                     );
                   }),
+              DashBoardItem(
+                title: "Rake Earned",
+                icon: Icons.call_made,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TotalRakeListPage()),
+                  );
+                },
+              ),
               DashBoardItem(title: "Start New Game", icon: Icons.add),
               DashBoardItem(title: "Edit Game", icon: Icons.edit),
               DashBoardItem(title: "Delete", icon: Icons.delete_outline)
